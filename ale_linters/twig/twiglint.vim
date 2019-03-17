@@ -6,13 +6,13 @@ call ale#Set('twig_twiglint_executable', 'vendor/bin/twig-lint')
 function! ale_linters#twig#twiglint#Handle(buffer, lines) abort
     " Matches patterns like the following:
     "
-	 " KO in macros.html.twig (line 889)
-	 "    887    {% endmacro %}
-	 "    888
-	 " >> 889    {% macro xxxx(var1 var2) %}
-	 " >> Arguments must be separated by a comma. Unexpected token "name" of value "var2" ("punctuation" expected with value ",").
-	 "    890    ...........
-	 "    891    	..............
+    " KO in macros.html.twig (line 889)
+    "    887    {% endmacro %}
+    "    888
+    " >> 889    {% macro xxxx(var1 var2) %}
+    " >> Arguments must be separated by a comma. Unexpected token "name" of value "var2" ("punctuation" expected with value ",").
+    "    890    ...........
+    "    891    	..............
     let l:pattern = '\v^KO in (.+) \(line (\d+)\)'
     let l:patternMsg = '\v\>\> ([a-zA-Z].+)'
 
