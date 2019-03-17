@@ -44,6 +44,6 @@ Set the path of the linter, it depends on where did you installed twig-lint.
 ```vim
 let g:ale_twig_twiglint_executable = 'vendor/bin/twig-lint'
 " Or on windows
-let g:ale_twig_twiglint_executable = 'vendor/bin/twig-lint.bat'
+let g:ale_twig_twiglint_executable = 'vendor\\bin\\twig-lint.bat'
 ```
 
